@@ -1,5 +1,5 @@
 {
-  "name": "ansi",
+  "name": "@grapevine/ansi",
   "version": "1.0.0",
   "description": "Parse ANSI escape codes",
   "main": "index.js",
