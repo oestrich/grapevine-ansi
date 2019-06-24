@@ -1,0 +1,31 @@
+{
+  "name": "ansi",
+  "version": "1.0.0",
+  "description": "Parse ANSI escape codes",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oestrich/grapevine-ansi.git"
+  },
+  "keywords": [
+    "ansi"
+  ],
+  "author": "Eric Oestrich",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/oestrich/grapevine-ansi/issues"
+  },
+  "homepage": "https://github.com/oestrich/grapevine-ansi#readme",
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "babel-jest": "^24.8.0",
+    "jest": "^24.8.0"
+  },
+  "dependencies": {
+    "underscore": "^1.9.1"
+  }
+}
