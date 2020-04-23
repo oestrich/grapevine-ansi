@@ -111,7 +111,11 @@ export const detectLines = (sequences) => {
 export const parseEscapeSequence = (sequence, currentOptions) => {
   // taken from Anser, https://github.com/IonicaBizau/anser
   let matches = sequence.match(/^\u001b\[([!\x3c-\x3f]*)([\d;]*)([\x20-\x2c]*[\x40-\x7e])([\s\S]*)/m);
-  const unsupportedCodes = ["A", "B", "C", "D", "E", "F", "G", "H", "J", "K", "S", "T", "mf", "i", "n", "u", "s", "h", "l"];
+  
+  // The whole a-zA-Z alphabet except "m", the only control sequence that appears to be handled.
+  const unsupportedCodes = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z",
+  "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z",
+  "mf" ]; // I don't understand when a two-letter code would terminate a control sequence, but I'll leave this here for compatibility
 
   if (!matches) {
     return new ParseError(sequence, currentOptions);
